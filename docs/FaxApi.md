@@ -229,7 +229,7 @@ namespace Example
             var documentId = 56;  // int? | Document id. If you want to use existing document you need to specify the document_id (optional) 
             var tsiNumber = tsiNumber_example;  // string | If we want to to change the text or number that appear on 'from' or 'sender' of the fax (optional) 
             var file = new System.IO.Stream(); // System.IO.Stream | PDF file to upload (optional) 
-            var deleteFile = 56;  // int? | Whether to delete file after fax transaction. (put 1 to delete) (optional) 
+            var deleteFile = 1;  // int? | Whether to delete file after fax transaction. (put 1 to delete) (optional) 
 
             try
             {
