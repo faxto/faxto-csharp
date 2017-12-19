@@ -398,9 +398,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
             if (faxNumber != null) localVarQueryParams.Add("fax_number", Configuration.ApiClient.ParameterToString(faxNumber)); // query parameter
@@ -419,7 +416,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -479,9 +475,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (documentId != null) localVarPathParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // path parameter
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
             if (faxNumber != null) localVarQueryParams.Add("fax_number", Configuration.ApiClient.ParameterToString(faxNumber)); // query parameter
@@ -500,7 +493,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -553,9 +545,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
@@ -574,7 +563,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -628,9 +616,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
@@ -649,7 +634,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -703,9 +687,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (jobId != null) localVarPathParams.Add("job_id", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
 
@@ -723,7 +704,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -778,9 +758,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (jobId != null) localVarPathParams.Add("job_id", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
 
@@ -798,7 +775,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -861,9 +837,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
             if (faxNumber != null) localVarFormParams.Add("fax_number", Configuration.ApiClient.ParameterToString(faxNumber)); // form parameter
             if (documentId != null) localVarFormParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // form parameter
@@ -885,7 +858,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -949,9 +921,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
             if (faxNumber != null) localVarFormParams.Add("fax_number", Configuration.ApiClient.ParameterToString(faxNumber)); // form parameter
             if (documentId != null) localVarFormParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // form parameter
@@ -973,7 +942,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
