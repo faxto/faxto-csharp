@@ -31,7 +31,6 @@ namespace Example
     {
         public void main()
         {
-            
             var apiInstance = new FilesApi();
             var apiKey = apiKey_example;  // string | API Key
 
@@ -91,7 +90,6 @@ namespace Example
     {
         public void main()
         {
-            
             var apiInstance = new FilesApi();
             var apiKey = apiKey_example;  // string | API Key
             var id = 3.4;  // decimal? | id of the file / document
@@ -153,7 +151,6 @@ namespace Example
     {
         public void main()
         {
-            
             var apiInstance = new FilesApi();
             var apiKey = apiKey_example;  // string | API Key
             var file = new System.IO.Stream(); // System.IO.Stream | PDF file to upload

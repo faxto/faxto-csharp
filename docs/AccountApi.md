@@ -29,7 +29,6 @@ namespace Example
     {
         public void main()
         {
-            
             var apiInstance = new AccountApi();
             var apiKey = apiKey_example;  // string | API Key
 
