@@ -59,7 +59,7 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns></returns>
-        void FaxHistoryGet (string apiKey, string limit = null, string page = null);
+        void FaxGet (string apiKey, string limit = null, string page = null);
 
         /// <summary>
         /// 
@@ -72,7 +72,7 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FaxHistoryGetWithHttpInfo (string apiKey, string limit = null, string page = null);
+        ApiResponse<Object> FaxGetWithHttpInfo (string apiKey, string limit = null, string page = null);
         /// <summary>
         /// 
         /// </summary>
@@ -100,33 +100,69 @@ namespace IO.Swagger.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        /// This API get faxes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns></returns>
-        void FaxPost (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null);
+        void IncomingFaxesGet (string apiKey);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        /// This API get faxes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FaxPostWithHttpInfo (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null);
+        ApiResponse<Object> IncomingFaxesGetWithHttpInfo (string apiKey);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get faxes  by number. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns></returns>
+        void IncomingFaxesNumberGet (string apiKey, string number);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get faxes  by number. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> IncomingFaxesNumberGetWithHttpInfo (string apiKey, string number);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get Provision numbers. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns></returns>
+        void ProvisionNumbersGet (string apiKey, string limit = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get Provision numbers. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ProvisionNumbersGetWithHttpInfo (string apiKey, string limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -165,7 +201,7 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FaxHistoryGetAsync (string apiKey, string limit = null, string page = null);
+        System.Threading.Tasks.Task FaxGetAsync (string apiKey, string limit = null, string page = null);
 
         /// <summary>
         /// 
@@ -178,7 +214,7 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FaxHistoryGetAsyncWithHttpInfo (string apiKey, string limit = null, string page = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FaxGetAsyncWithHttpInfo (string apiKey, string limit = null, string page = null);
         /// <summary>
         /// 
         /// </summary>
@@ -206,33 +242,69 @@ namespace IO.Swagger.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        /// This API get faxes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FaxPostAsync (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null);
+        System.Threading.Tasks.Task IncomingFaxesGetAsync (string apiKey);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        /// This API get faxes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FaxPostAsyncWithHttpInfo (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> IncomingFaxesGetAsyncWithHttpInfo (string apiKey);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get faxes  by number. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task IncomingFaxesNumberGetAsync (string apiKey, string number);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get faxes  by number. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> IncomingFaxesNumberGetAsyncWithHttpInfo (string apiKey, string number);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get Provision numbers. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ProvisionNumbersGetAsync (string apiKey, string limit = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// This API get Provision numbers. 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ProvisionNumbersGetAsyncWithHttpInfo (string apiKey, string limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -506,9 +578,9 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns></returns>
-        public void FaxHistoryGet (string apiKey, string limit = null, string page = null)
+        public void FaxGet (string apiKey, string limit = null, string page = null)
         {
-             FaxHistoryGetWithHttpInfo(apiKey, limit, page);
+             FaxGetWithHttpInfo(apiKey, limit, page);
         }
 
         /// <summary>
@@ -519,13 +591,13 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FaxHistoryGetWithHttpInfo (string apiKey, string limit = null, string page = null)
+        public ApiResponse<Object> FaxGetWithHttpInfo (string apiKey, string limit = null, string page = null)
         {
             // verify the required parameter 'apiKey' is set
             if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->FaxHistoryGet");
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->FaxGet");
 
-            var localVarPath = "/fax-history";
+            var localVarPath = "/fax";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -559,7 +631,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FaxHistoryGet", localVarResponse);
+                Exception exception = ExceptionFactory("FaxGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -576,9 +648,9 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FaxHistoryGetAsync (string apiKey, string limit = null, string page = null)
+        public async System.Threading.Tasks.Task FaxGetAsync (string apiKey, string limit = null, string page = null)
         {
-             await FaxHistoryGetAsyncWithHttpInfo(apiKey, limit, page);
+             await FaxGetAsyncWithHttpInfo(apiKey, limit, page);
 
         }
 
@@ -590,13 +662,13 @@ namespace IO.Swagger.Api
         /// <param name="limit">Number of records to return (optional)</param>
         /// <param name="page">Page to display (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FaxHistoryGetAsyncWithHttpInfo (string apiKey, string limit = null, string page = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FaxGetAsyncWithHttpInfo (string apiKey, string limit = null, string page = null)
         {
             // verify the required parameter 'apiKey' is set
             if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->FaxHistoryGet");
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->FaxGet");
 
-            var localVarPath = "/fax-history";
+            var localVarPath = "/fax";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -630,7 +702,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FaxHistoryGet", localVarResponse);
+                Exception exception = ExceptionFactory("FaxGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -781,42 +853,29 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        ///  This API get faxes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns></returns>
-        public void FaxPost (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null)
+        public void IncomingFaxesGet (string apiKey)
         {
-             FaxPostWithHttpInfo(apiKey, faxNumber, documentId, tsiNumber, file, deleteFile);
+             IncomingFaxesGetWithHttpInfo(apiKey);
         }
 
         /// <summary>
-        ///  This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        ///  This API get faxes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FaxPostWithHttpInfo (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null)
+        public ApiResponse<Object> IncomingFaxesGetWithHttpInfo (string apiKey)
         {
             // verify the required parameter 'apiKey' is set
             if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->FaxPost");
-            // verify the required parameter 'faxNumber' is set
-            if (faxNumber == null)
-                throw new ApiException(400, "Missing required parameter 'faxNumber' when calling FaxApi->FaxPost");
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->IncomingFaxesGet");
 
-            var localVarPath = "/fax";
+            var localVarPath = "/incoming-faxes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -826,7 +885,6 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -838,23 +896,18 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (faxNumber != null) localVarFormParams.Add("fax_number", Configuration.ApiClient.ParameterToString(faxNumber)); // form parameter
-            if (documentId != null) localVarFormParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // form parameter
-            if (tsiNumber != null) localVarFormParams.Add("tsi_number", Configuration.ApiClient.ParameterToString(tsiNumber)); // form parameter
-            if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
-            if (deleteFile != null) localVarFormParams.Add("delete_file", Configuration.ApiClient.ParameterToString(deleteFile)); // form parameter
 
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FaxPost", localVarResponse);
+                Exception exception = ExceptionFactory("IncomingFaxesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -864,43 +917,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        ///  This API get faxes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FaxPostAsync (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null)
+        public async System.Threading.Tasks.Task IncomingFaxesGetAsync (string apiKey)
         {
-             await FaxPostAsyncWithHttpInfo(apiKey, faxNumber, documentId, tsiNumber, file, deleteFile);
+             await IncomingFaxesGetAsyncWithHttpInfo(apiKey);
 
         }
 
         /// <summary>
-        ///  This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+        ///  This API get faxes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="apiKey">API Key</param>
-        /// <param name="faxNumber">Fax Number</param>
-        /// <param name="documentId">Document id. If you want to use existing document you need to specify the document_id (optional)</param>
-        /// <param name="tsiNumber">If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax (optional)</param>
-        /// <param name="file">PDF file to upload (optional)</param>
-        /// <param name="deleteFile">Whether to delete file after fax transaction. (put 1 to delete) (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FaxPostAsyncWithHttpInfo (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> IncomingFaxesGetAsyncWithHttpInfo (string apiKey)
         {
             // verify the required parameter 'apiKey' is set
             if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->FaxPost");
-            // verify the required parameter 'faxNumber' is set
-            if (faxNumber == null)
-                throw new ApiException(400, "Missing required parameter 'faxNumber' when calling FaxApi->FaxPost");
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->IncomingFaxesGet");
 
-            var localVarPath = "/fax";
+            var localVarPath = "/incoming-faxes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -910,7 +950,6 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -922,23 +961,294 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (faxNumber != null) localVarFormParams.Add("fax_number", Configuration.ApiClient.ParameterToString(faxNumber)); // form parameter
-            if (documentId != null) localVarFormParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // form parameter
-            if (tsiNumber != null) localVarFormParams.Add("tsi_number", Configuration.ApiClient.ParameterToString(tsiNumber)); // form parameter
-            if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
-            if (deleteFile != null) localVarFormParams.Add("delete_file", Configuration.ApiClient.ParameterToString(deleteFile)); // form parameter
 
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FaxPost", localVarResponse);
+                Exception exception = ExceptionFactory("IncomingFaxesGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get faxes  by number. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns></returns>
+        public void IncomingFaxesNumberGet (string apiKey, string number)
+        {
+             IncomingFaxesNumberGetWithHttpInfo(apiKey, number);
+        }
+
+        /// <summary>
+        ///  This API get faxes  by number. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> IncomingFaxesNumberGetWithHttpInfo (string apiKey, string number)
+        {
+            // verify the required parameter 'apiKey' is set
+            if (apiKey == null)
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->IncomingFaxesNumberGet");
+            // verify the required parameter 'number' is set
+            if (number == null)
+                throw new ApiException(400, "Missing required parameter 'number' when calling FaxApi->IncomingFaxesNumberGet");
+
+            var localVarPath = "/incoming-faxes/{number}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (number != null) localVarPathParams.Add("number", Configuration.ApiClient.ParameterToString(number)); // path parameter
+            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IncomingFaxesNumberGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get faxes  by number. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task IncomingFaxesNumberGetAsync (string apiKey, string number)
+        {
+             await IncomingFaxesNumberGetAsyncWithHttpInfo(apiKey, number);
+
+        }
+
+        /// <summary>
+        ///  This API get faxes  by number. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="number">Number in the fax</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> IncomingFaxesNumberGetAsyncWithHttpInfo (string apiKey, string number)
+        {
+            // verify the required parameter 'apiKey' is set
+            if (apiKey == null)
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->IncomingFaxesNumberGet");
+            // verify the required parameter 'number' is set
+            if (number == null)
+                throw new ApiException(400, "Missing required parameter 'number' when calling FaxApi->IncomingFaxesNumberGet");
+
+            var localVarPath = "/incoming-faxes/{number}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (number != null) localVarPathParams.Add("number", Configuration.ApiClient.ParameterToString(number)); // path parameter
+            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IncomingFaxesNumberGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get Provision numbers. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns></returns>
+        public void ProvisionNumbersGet (string apiKey, string limit = null)
+        {
+             ProvisionNumbersGetWithHttpInfo(apiKey, limit);
+        }
+
+        /// <summary>
+        ///  This API get Provision numbers. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ProvisionNumbersGetWithHttpInfo (string apiKey, string limit = null)
+        {
+            // verify the required parameter 'apiKey' is set
+            if (apiKey == null)
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->ProvisionNumbersGet");
+
+            var localVarPath = "/provision-numbers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProvisionNumbersGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get Provision numbers. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ProvisionNumbersGetAsync (string apiKey, string limit = null)
+        {
+             await ProvisionNumbersGetAsyncWithHttpInfo(apiKey, limit);
+
+        }
+
+        /// <summary>
+        ///  This API get Provision numbers. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKey">API Key</param>
+        /// <param name="limit">Limit to display (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ProvisionNumbersGetAsyncWithHttpInfo (string apiKey, string limit = null)
+        {
+            // verify the required parameter 'apiKey' is set
+            if (apiKey == null)
+                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FaxApi->ProvisionNumbersGet");
+
+            var localVarPath = "/provision-numbers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProvisionNumbersGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

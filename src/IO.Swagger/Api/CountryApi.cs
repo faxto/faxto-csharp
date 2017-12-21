@@ -20,256 +20,248 @@ namespace IO.Swagger.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IFilesApi : IApiAccessor
+    public interface ICountryApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get clean file from document id. 
+        /// This API get areacodes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns></returns>
-        void FileCleanGet (string apiKey, string documentId);
+        void AreacodesCountryCodeStateIdGet (string countryCode, string stateId);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get clean file from document id. 
+        /// This API get areacodes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FileCleanGetWithHttpInfo (string apiKey, string documentId);
+        ApiResponse<Object> AreacodesCountryCodeStateIdGetWithHttpInfo (string countryCode, string stateId);
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get generated preview file from document id. 
+        /// This API didgroups countryCode. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns></returns>
-        void FileGeneratePreviewGet (string apiKey, string documentId);
+        void CountriesCountryCodeDidgroupsGet (string countryCode, string didGroupIds, string stateId, string cityNamePattern);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get generated preview file from document id. 
+        /// This API didgroups countryCode. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FileGeneratePreviewGetWithHttpInfo (string apiKey, string documentId);
+        ApiResponse<Object> CountriesCountryCodeDidgroupsGetWithHttpInfo (string countryCode, string didGroupIds, string stateId, string cityNamePattern);
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API lists all the files 
+        /// This API didgroups provision. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
+        /// <param name="didGroupId">didGroupId in the Country</param>
         /// <returns></returns>
-        void FilesGet (string apiKey);
+        void CountriesDidgroupsDidGroupIdProvisionPost (string didGroupId);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API lists all the files 
+        /// This API didgroups provision. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
+        /// <param name="didGroupId">didGroupId in the Country</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FilesGetWithHttpInfo (string apiKey);
+        ApiResponse<Object> CountriesDidgroupsDidGroupIdProvisionPostWithHttpInfo (string didGroupId);
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API deletes a single file. 
+        /// This API get countries. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
         /// <returns></returns>
-        void FilesIdDelete (string apiKey, decimal? id);
+        void CountriesGet ();
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API deletes a single file. 
+        /// This API get countries. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FilesIdDeleteWithHttpInfo (string apiKey, decimal? id);
+        ApiResponse<Object> CountriesGetWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API allows uploading of a single file. 
+        /// This API get States . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>System.IO.Stream</returns>
-        System.IO.Stream FilesPost (string apiKey, System.IO.Stream file, string addRemoteFile = null);
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns></returns>
+        void StatesCountryCodeGet (string countryCode);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API allows uploading of a single file. 
+        /// This API get States . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> FilesPostWithHttpInfo (string apiKey, System.IO.Stream file, string addRemoteFile = null);
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> StatesCountryCodeGetWithHttpInfo (string countryCode);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get clean file from document id. 
+        /// This API get areacodes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FileCleanGetAsync (string apiKey, string documentId);
+        System.Threading.Tasks.Task AreacodesCountryCodeStateIdGetAsync (string countryCode, string stateId);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get clean file from document id. 
+        /// This API get areacodes . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FileCleanGetAsyncWithHttpInfo (string apiKey, string documentId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AreacodesCountryCodeStateIdGetAsyncWithHttpInfo (string countryCode, string stateId);
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get generated preview file from document id. 
+        /// This API didgroups countryCode. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FileGeneratePreviewGetAsync (string apiKey, string documentId);
+        System.Threading.Tasks.Task CountriesCountryCodeDidgroupsGetAsync (string countryCode, string didGroupIds, string stateId, string cityNamePattern);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API get generated preview file from document id. 
+        /// This API didgroups countryCode. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FileGeneratePreviewGetAsyncWithHttpInfo (string apiKey, string documentId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CountriesCountryCodeDidgroupsGetAsyncWithHttpInfo (string countryCode, string didGroupIds, string stateId, string cityNamePattern);
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API lists all the files 
+        /// This API didgroups provision. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
+        /// <param name="didGroupId">didGroupId in the Country</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FilesGetAsync (string apiKey);
+        System.Threading.Tasks.Task CountriesDidgroupsDidGroupIdProvisionPostAsync (string didGroupId);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API lists all the files 
+        /// This API didgroups provision. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
+        /// <param name="didGroupId">didGroupId in the Country</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FilesGetAsyncWithHttpInfo (string apiKey);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CountriesDidgroupsDidGroupIdProvisionPostAsyncWithHttpInfo (string didGroupId);
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API deletes a single file. 
+        /// This API get countries. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FilesIdDeleteAsync (string apiKey, decimal? id);
+        System.Threading.Tasks.Task CountriesGetAsync ();
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API deletes a single file. 
+        /// This API get countries. 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FilesIdDeleteAsyncWithHttpInfo (string apiKey, decimal? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CountriesGetAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API allows uploading of a single file. 
+        /// This API get States . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> FilesPostAsync (string apiKey, System.IO.Stream file, string addRemoteFile = null);
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task StatesCountryCodeGetAsync (string countryCode);
 
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// This API allows uploading of a single file. 
+        /// This API get States . 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> FilesPostAsyncWithHttpInfo (string apiKey, System.IO.Stream file, string addRemoteFile = null);
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> StatesCountryCodeGetAsyncWithHttpInfo (string countryCode);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class FilesApi : IFilesApi
+    public partial class CountryApi : ICountryApi
     {
         private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FilesApi"/> class.
+        /// Initializes a new instance of the <see cref="CountryApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public FilesApi(String basePath)
+        public CountryApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -283,12 +275,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FilesApi"/> class
+        /// Initializes a new instance of the <see cref="CountryApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public FilesApi(Configuration configuration = null)
+        public CountryApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default;
@@ -368,34 +360,34 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API get clean file from document id. 
+        ///  This API get areacodes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns></returns>
-        public void FileCleanGet (string apiKey, string documentId)
+        public void AreacodesCountryCodeStateIdGet (string countryCode, string stateId)
         {
-             FileCleanGetWithHttpInfo(apiKey, documentId);
+             AreacodesCountryCodeStateIdGetWithHttpInfo(countryCode, stateId);
         }
 
         /// <summary>
-        ///  This API get clean file from document id. 
+        ///  This API get areacodes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FileCleanGetWithHttpInfo (string apiKey, string documentId)
+        public ApiResponse<Object> AreacodesCountryCodeStateIdGetWithHttpInfo (string countryCode, string stateId)
         {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FileCleanGet");
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FilesApi->FileCleanGet");
+            // verify the required parameter 'countryCode' is set
+            if (countryCode == null)
+                throw new ApiException(400, "Missing required parameter 'countryCode' when calling CountryApi->AreacodesCountryCodeStateIdGet");
+            // verify the required parameter 'stateId' is set
+            if (stateId == null)
+                throw new ApiException(400, "Missing required parameter 'stateId' when calling CountryApi->AreacodesCountryCodeStateIdGet");
 
-            var localVarPath = "/file-clean";
+            var localVarPath = "/areacodes/{countryCode}/{stateId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -415,8 +407,8 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (documentId != null) localVarQueryParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // query parameter
+            if (countryCode != null) localVarPathParams.Add("countryCode", Configuration.ApiClient.ParameterToString(countryCode)); // path parameter
+            if (stateId != null) localVarPathParams.Add("stateId", Configuration.ApiClient.ParameterToString(stateId)); // path parameter
 
 
             // make the HTTP request
@@ -428,7 +420,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FileCleanGet", localVarResponse);
+                Exception exception = ExceptionFactory("AreacodesCountryCodeStateIdGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -438,35 +430,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API get clean file from document id. 
+        ///  This API get areacodes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FileCleanGetAsync (string apiKey, string documentId)
+        public async System.Threading.Tasks.Task AreacodesCountryCodeStateIdGetAsync (string countryCode, string stateId)
         {
-             await FileCleanGetAsyncWithHttpInfo(apiKey, documentId);
+             await AreacodesCountryCodeStateIdGetAsyncWithHttpInfo(countryCode, stateId);
 
         }
 
         /// <summary>
-        ///  This API get clean file from document id. 
+        ///  This API get areacodes . 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FileCleanGetAsyncWithHttpInfo (string apiKey, string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AreacodesCountryCodeStateIdGetAsyncWithHttpInfo (string countryCode, string stateId)
         {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FileCleanGet");
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FilesApi->FileCleanGet");
+            // verify the required parameter 'countryCode' is set
+            if (countryCode == null)
+                throw new ApiException(400, "Missing required parameter 'countryCode' when calling CountryApi->AreacodesCountryCodeStateIdGet");
+            // verify the required parameter 'stateId' is set
+            if (stateId == null)
+                throw new ApiException(400, "Missing required parameter 'stateId' when calling CountryApi->AreacodesCountryCodeStateIdGet");
 
-            var localVarPath = "/file-clean";
+            var localVarPath = "/areacodes/{countryCode}/{stateId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -486,8 +478,8 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (documentId != null) localVarQueryParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // query parameter
+            if (countryCode != null) localVarPathParams.Add("countryCode", Configuration.ApiClient.ParameterToString(countryCode)); // path parameter
+            if (stateId != null) localVarPathParams.Add("stateId", Configuration.ApiClient.ParameterToString(stateId)); // path parameter
 
 
             // make the HTTP request
@@ -499,7 +491,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FileCleanGet", localVarResponse);
+                Exception exception = ExceptionFactory("AreacodesCountryCodeStateIdGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -509,34 +501,44 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API get generated preview file from document id. 
+        ///  This API didgroups countryCode. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns></returns>
-        public void FileGeneratePreviewGet (string apiKey, string documentId)
+        public void CountriesCountryCodeDidgroupsGet (string countryCode, string didGroupIds, string stateId, string cityNamePattern)
         {
-             FileGeneratePreviewGetWithHttpInfo(apiKey, documentId);
+             CountriesCountryCodeDidgroupsGetWithHttpInfo(countryCode, didGroupIds, stateId, cityNamePattern);
         }
 
         /// <summary>
-        ///  This API get generated preview file from document id. 
+        ///  This API didgroups countryCode. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FileGeneratePreviewGetWithHttpInfo (string apiKey, string documentId)
+        public ApiResponse<Object> CountriesCountryCodeDidgroupsGetWithHttpInfo (string countryCode, string didGroupIds, string stateId, string cityNamePattern)
         {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FileGeneratePreviewGet");
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FilesApi->FileGeneratePreviewGet");
+            // verify the required parameter 'countryCode' is set
+            if (countryCode == null)
+                throw new ApiException(400, "Missing required parameter 'countryCode' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
+            // verify the required parameter 'didGroupIds' is set
+            if (didGroupIds == null)
+                throw new ApiException(400, "Missing required parameter 'didGroupIds' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
+            // verify the required parameter 'stateId' is set
+            if (stateId == null)
+                throw new ApiException(400, "Missing required parameter 'stateId' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
+            // verify the required parameter 'cityNamePattern' is set
+            if (cityNamePattern == null)
+                throw new ApiException(400, "Missing required parameter 'cityNamePattern' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
 
-            var localVarPath = "/file-generate-preview";
+            var localVarPath = "/countries/{countryCode}/didgroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -556,8 +558,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (documentId != null) localVarQueryParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // query parameter
+            if (countryCode != null) localVarPathParams.Add("countryCode", Configuration.ApiClient.ParameterToString(countryCode)); // path parameter
+            if (didGroupIds != null) localVarQueryParams.Add("didGroupIds", Configuration.ApiClient.ParameterToString(didGroupIds)); // query parameter
+            if (stateId != null) localVarQueryParams.Add("stateId", Configuration.ApiClient.ParameterToString(stateId)); // query parameter
+            if (cityNamePattern != null) localVarQueryParams.Add("cityNamePattern", Configuration.ApiClient.ParameterToString(cityNamePattern)); // query parameter
 
 
             // make the HTTP request
@@ -569,7 +573,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FileGeneratePreviewGet", localVarResponse);
+                Exception exception = ExceptionFactory("CountriesCountryCodeDidgroupsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -579,35 +583,45 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API get generated preview file from document id. 
+        ///  This API didgroups countryCode. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FileGeneratePreviewGetAsync (string apiKey, string documentId)
+        public async System.Threading.Tasks.Task CountriesCountryCodeDidgroupsGetAsync (string countryCode, string didGroupIds, string stateId, string cityNamePattern)
         {
-             await FileGeneratePreviewGetAsyncWithHttpInfo(apiKey, documentId);
+             await CountriesCountryCodeDidgroupsGetAsyncWithHttpInfo(countryCode, didGroupIds, stateId, cityNamePattern);
 
         }
 
         /// <summary>
-        ///  This API get generated preview file from document id. 
+        ///  This API didgroups countryCode. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="documentId">Document ID in the fax</param>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <param name="didGroupIds">didGroupId in the Country</param>
+        /// <param name="stateId">stateId in the Country</param>
+        /// <param name="cityNamePattern">cityNamePattern in the Country</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FileGeneratePreviewGetAsyncWithHttpInfo (string apiKey, string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CountriesCountryCodeDidgroupsGetAsyncWithHttpInfo (string countryCode, string didGroupIds, string stateId, string cityNamePattern)
         {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FileGeneratePreviewGet");
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FilesApi->FileGeneratePreviewGet");
+            // verify the required parameter 'countryCode' is set
+            if (countryCode == null)
+                throw new ApiException(400, "Missing required parameter 'countryCode' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
+            // verify the required parameter 'didGroupIds' is set
+            if (didGroupIds == null)
+                throw new ApiException(400, "Missing required parameter 'didGroupIds' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
+            // verify the required parameter 'stateId' is set
+            if (stateId == null)
+                throw new ApiException(400, "Missing required parameter 'stateId' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
+            // verify the required parameter 'cityNamePattern' is set
+            if (cityNamePattern == null)
+                throw new ApiException(400, "Missing required parameter 'cityNamePattern' when calling CountryApi->CountriesCountryCodeDidgroupsGet");
 
-            var localVarPath = "/file-generate-preview";
+            var localVarPath = "/countries/{countryCode}/didgroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -627,8 +641,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (documentId != null) localVarQueryParams.Add("document_id", Configuration.ApiClient.ParameterToString(documentId)); // query parameter
+            if (countryCode != null) localVarPathParams.Add("countryCode", Configuration.ApiClient.ParameterToString(countryCode)); // path parameter
+            if (didGroupIds != null) localVarQueryParams.Add("didGroupIds", Configuration.ApiClient.ParameterToString(didGroupIds)); // query parameter
+            if (stateId != null) localVarQueryParams.Add("stateId", Configuration.ApiClient.ParameterToString(stateId)); // query parameter
+            if (cityNamePattern != null) localVarQueryParams.Add("cityNamePattern", Configuration.ApiClient.ParameterToString(cityNamePattern)); // query parameter
 
 
             // make the HTTP request
@@ -640,7 +656,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FileGeneratePreviewGet", localVarResponse);
+                Exception exception = ExceptionFactory("CountriesCountryCodeDidgroupsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -650,29 +666,29 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  This API lists all the files 
+        ///  This API didgroups provision. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
+        /// <param name="didGroupId">didGroupId in the Country</param>
         /// <returns></returns>
-        public void FilesGet (string apiKey)
+        public void CountriesDidgroupsDidGroupIdProvisionPost (string didGroupId)
         {
-             FilesGetWithHttpInfo(apiKey);
+             CountriesDidgroupsDidGroupIdProvisionPostWithHttpInfo(didGroupId);
         }
 
         /// <summary>
-        ///  This API lists all the files 
+        ///  This API didgroups provision. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
+        /// <param name="didGroupId">didGroupId in the Country</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FilesGetWithHttpInfo (string apiKey)
+        public ApiResponse<Object> CountriesDidgroupsDidGroupIdProvisionPostWithHttpInfo (string didGroupId)
         {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FilesGet");
+            // verify the required parameter 'didGroupId' is set
+            if (didGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'didGroupId' when calling CountryApi->CountriesDidgroupsDidGroupIdProvisionPost");
 
-            var localVarPath = "/files";
+            var localVarPath = "/countries/didgroups/{didGroupId}/provision";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -692,289 +708,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilesGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  This API lists all the files 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FilesGetAsync (string apiKey)
-        {
-             await FilesGetAsyncWithHttpInfo(apiKey);
-
-        }
-
-        /// <summary>
-        ///  This API lists all the files 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FilesGetAsyncWithHttpInfo (string apiKey)
-        {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FilesGet");
-
-            var localVarPath = "/files";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilesGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  This API deletes a single file. 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
-        /// <returns></returns>
-        public void FilesIdDelete (string apiKey, decimal? id)
-        {
-             FilesIdDeleteWithHttpInfo(apiKey, id);
-        }
-
-        /// <summary>
-        ///  This API deletes a single file. 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FilesIdDeleteWithHttpInfo (string apiKey, decimal? id)
-        {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FilesIdDelete");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling FilesApi->FilesIdDelete");
-
-            var localVarPath = "/files/{id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilesIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  This API deletes a single file. 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FilesIdDeleteAsync (string apiKey, decimal? id)
-        {
-             await FilesIdDeleteAsyncWithHttpInfo(apiKey, id);
-
-        }
-
-        /// <summary>
-        ///  This API deletes a single file. 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="id">id of the file / document</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FilesIdDeleteAsyncWithHttpInfo (string apiKey, decimal? id)
-        {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FilesIdDelete");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling FilesApi->FilesIdDelete");
-
-            var localVarPath = "/files/{id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("FilesIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  This API allows uploading of a single file. 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream FilesPost (string apiKey, System.IO.Stream file, string addRemoteFile = null)
-        {
-             ApiResponse<System.IO.Stream> localVarResponse = FilesPostWithHttpInfo(apiKey, file, addRemoteFile);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  This API allows uploading of a single file. 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > FilesPostWithHttpInfo (string apiKey, System.IO.Stream file, string addRemoteFile = null)
-        {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FilesPost");
-            // verify the required parameter 'file' is set
-            if (file == null)
-                throw new ApiException(400, "Missing required parameter 'file' when calling FilesApi->FilesPost");
-
-            var localVarPath = "/files";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
-            if (addRemoteFile != null) localVarFormParams.Add("AddRemoteFile", Configuration.ApiClient.ParameterToString(addRemoteFile)); // form parameter
+            if (didGroupId != null) localVarPathParams.Add("didGroupId", Configuration.ApiClient.ParameterToString(didGroupId)); // path parameter
 
 
             // make the HTTP request
@@ -986,48 +720,40 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FilesPost", localVarResponse);
+                Exception exception = ExceptionFactory("CountriesDidgroupsDidGroupIdProvisionPost", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                null);
         }
 
         /// <summary>
-        ///  This API allows uploading of a single file. 
+        ///  This API didgroups provision. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> FilesPostAsync (string apiKey, System.IO.Stream file, string addRemoteFile = null)
+        /// <param name="didGroupId">didGroupId in the Country</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CountriesDidgroupsDidGroupIdProvisionPostAsync (string didGroupId)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await FilesPostAsyncWithHttpInfo(apiKey, file, addRemoteFile);
-             return localVarResponse.Data;
+             await CountriesDidgroupsDidGroupIdProvisionPostAsyncWithHttpInfo(didGroupId);
 
         }
 
         /// <summary>
-        ///  This API allows uploading of a single file. 
+        ///  This API didgroups provision. 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKey">API Key</param>
-        /// <param name="file">PDF file to upload</param>
-        /// <param name="addRemoteFile">Given the remote file url (optional)</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> FilesPostAsyncWithHttpInfo (string apiKey, System.IO.Stream file, string addRemoteFile = null)
+        /// <param name="didGroupId">didGroupId in the Country</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CountriesDidgroupsDidGroupIdProvisionPostAsyncWithHttpInfo (string didGroupId)
         {
-            // verify the required parameter 'apiKey' is set
-            if (apiKey == null)
-                throw new ApiException(400, "Missing required parameter 'apiKey' when calling FilesApi->FilesPost");
-            // verify the required parameter 'file' is set
-            if (file == null)
-                throw new ApiException(400, "Missing required parameter 'file' when calling FilesApi->FilesPost");
+            // verify the required parameter 'didGroupId' is set
+            if (didGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'didGroupId' when calling CountryApi->CountriesDidgroupsDidGroupIdProvisionPost");
 
-            var localVarPath = "/files";
+            var localVarPath = "/countries/didgroups/{didGroupId}/provision";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1037,21 +763,17 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (apiKey != null) localVarQueryParams.Add("api_key", Configuration.ApiClient.ParameterToString(apiKey)); // query parameter
-            if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
-            if (addRemoteFile != null) localVarFormParams.Add("AddRemoteFile", Configuration.ApiClient.ParameterToString(addRemoteFile)); // form parameter
+            if (didGroupId != null) localVarPathParams.Add("didGroupId", Configuration.ApiClient.ParameterToString(didGroupId)); // path parameter
 
 
             // make the HTTP request
@@ -1063,13 +785,259 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FilesPost", localVarResponse);
+                Exception exception = ExceptionFactory("CountriesDidgroupsDidGroupIdProvisionPost", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                null);
+        }
+
+        /// <summary>
+        ///  This API get countries. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        public void CountriesGet ()
+        {
+             CountriesGetWithHttpInfo();
+        }
+
+        /// <summary>
+        ///  This API get countries. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CountriesGetWithHttpInfo ()
+        {
+
+            var localVarPath = "/countries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CountriesGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get countries. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CountriesGetAsync ()
+        {
+             await CountriesGetAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        ///  This API get countries. 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CountriesGetAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/countries";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CountriesGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get States . 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns></returns>
+        public void StatesCountryCodeGet (string countryCode)
+        {
+             StatesCountryCodeGetWithHttpInfo(countryCode);
+        }
+
+        /// <summary>
+        ///  This API get States . 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> StatesCountryCodeGetWithHttpInfo (string countryCode)
+        {
+            // verify the required parameter 'countryCode' is set
+            if (countryCode == null)
+                throw new ApiException(400, "Missing required parameter 'countryCode' when calling CountryApi->StatesCountryCodeGet");
+
+            var localVarPath = "/states/{countryCode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (countryCode != null) localVarPathParams.Add("countryCode", Configuration.ApiClient.ParameterToString(countryCode)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StatesCountryCodeGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  This API get States . 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task StatesCountryCodeGetAsync (string countryCode)
+        {
+             await StatesCountryCodeGetAsyncWithHttpInfo(countryCode);
+
+        }
+
+        /// <summary>
+        ///  This API get States . 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="countryCode">countryCode in the Country</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> StatesCountryCodeGetAsyncWithHttpInfo (string countryCode)
+        {
+            // verify the required parameter 'countryCode' is set
+            if (countryCode == null)
+                throw new ApiException(400, "Missing required parameter 'countryCode' when calling CountryApi->StatesCountryCodeGet");
+
+            var localVarPath = "/states/{countryCode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (countryCode != null) localVarPathParams.Add("countryCode", Configuration.ApiClient.ParameterToString(countryCode)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StatesCountryCodeGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

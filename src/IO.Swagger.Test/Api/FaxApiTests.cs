@@ -78,16 +78,16 @@ namespace IO.Swagger.Test
         }
         
         /// <summary>
-        /// Test FaxHistoryGet
+        /// Test FaxGet
         /// </summary>
         [Test]
-        public void FaxHistoryGetTest()
+        public void FaxGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string apiKey = null;
             //string limit = null;
             //string page = null;
-            //instance.FaxHistoryGet(apiKey, limit, page);
+            //instance.FaxGet(apiKey, limit, page);
             
         }
         
@@ -105,19 +105,40 @@ namespace IO.Swagger.Test
         }
         
         /// <summary>
-        /// Test FaxPost
+        /// Test IncomingFaxesGet
         /// </summary>
         [Test]
-        public void FaxPostTest()
+        public void IncomingFaxesGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string apiKey = null;
-            //string faxNumber = null;
-            //int? documentId = null;
-            //string tsiNumber = null;
-            //System.IO.Stream file = null;
-            //int? deleteFile = null;
-            //instance.FaxPost(apiKey, faxNumber, documentId, tsiNumber, file, deleteFile);
+            //instance.IncomingFaxesGet(apiKey);
+            
+        }
+        
+        /// <summary>
+        /// Test IncomingFaxesNumberGet
+        /// </summary>
+        [Test]
+        public void IncomingFaxesNumberGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string apiKey = null;
+            //string number = null;
+            //instance.IncomingFaxesNumberGet(apiKey, number);
+            
+        }
+        
+        /// <summary>
+        /// Test ProvisionNumbersGet
+        /// </summary>
+        [Test]
+        public void ProvisionNumbersGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string apiKey = null;
+            //string limit = null;
+            //instance.ProvisionNumbersGet(apiKey, limit);
             
         }
         
