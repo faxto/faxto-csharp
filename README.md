@@ -88,18 +88,28 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://fax.to/api/v1*
+All URIs are relative to *https://fax.to/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountApi* | [**BalanceGet**](docs/AccountApi.md#balanceget) | **GET** /balance | 
+*CountryApi* | [**AreacodesCountryCodeStateIdGet**](docs/CountryApi.md#areacodescountrycodestateidget) | **GET** /areacodes/{countryCode}/{stateId} | 
+*CountryApi* | [**CountriesCountryCodeDidgroupsGet**](docs/CountryApi.md#countriescountrycodedidgroupsget) | **GET** /countries/{countryCode}/didgroups | 
+*CountryApi* | [**CountriesDidgroupsDidGroupIdProvisionPost**](docs/CountryApi.md#countriesdidgroupsdidgroupidprovisionpost) | **POST** /countries/didgroups/{didGroupId}/provision | 
+*CountryApi* | [**CountriesGet**](docs/CountryApi.md#countriesget) | **GET** /countries | 
+*CountryApi* | [**StatesCountryCodeGet**](docs/CountryApi.md#statescountrycodeget) | **GET** /states/{countryCode} | 
 *FaxApi* | [**FaxDocumentIdCostsGet**](docs/FaxApi.md#faxdocumentidcostsget) | **GET** /fax/{document_id}/costs | 
-*FaxApi* | [**FaxHistoryGet**](docs/FaxApi.md#faxhistoryget) | **GET** /fax-history | 
+*FaxApi* | [**FaxGet**](docs/FaxApi.md#faxget) | **GET** /fax | 
 *FaxApi* | [**FaxJobIdStatusGet**](docs/FaxApi.md#faxjobidstatusget) | **GET** /fax/{job_id}/status | 
-*FaxApi* | [**FaxPost**](docs/FaxApi.md#faxpost) | **POST** /fax | 
+*FaxApi* | [**IncomingFaxesGet**](docs/FaxApi.md#incomingfaxesget) | **GET** /incoming-faxes | 
+*FaxApi* | [**IncomingFaxesNumberGet**](docs/FaxApi.md#incomingfaxesnumberget) | **GET** /incoming-faxes/{number} | 
+*FaxApi* | [**ProvisionNumbersGet**](docs/FaxApi.md#provisionnumbersget) | **GET** /provision-numbers | 
+*FilesApi* | [**FileCleanGet**](docs/FilesApi.md#filecleanget) | **GET** /file-clean | 
+*FilesApi* | [**FileGeneratePreviewGet**](docs/FilesApi.md#filegeneratepreviewget) | **GET** /file-generate-preview | 
 *FilesApi* | [**FilesGet**](docs/FilesApi.md#filesget) | **GET** /files | 
 *FilesApi* | [**FilesIdDelete**](docs/FilesApi.md#filesiddelete) | **DELETE** /files/{id} | 
 *FilesApi* | [**FilesPost**](docs/FilesApi.md#filespost) | **POST** /files | 
+*NumberApi* | [**NumbersGet**](docs/NumberApi.md#numbersget) | **GET** /numbers | 
 
 
 <a name="documentation-for-models"></a>

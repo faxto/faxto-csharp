@@ -1,13 +1,15 @@
 # IO.Swagger.Api.FaxApi
 
-All URIs are relative to *https://fax.to/api/v1*
+All URIs are relative to *https://fax.to/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FaxDocumentIdCostsGet**](FaxApi.md#faxdocumentidcostsget) | **GET** /fax/{document_id}/costs | 
-[**FaxHistoryGet**](FaxApi.md#faxhistoryget) | **GET** /fax-history | 
+[**FaxGet**](FaxApi.md#faxget) | **GET** /fax | 
 [**FaxJobIdStatusGet**](FaxApi.md#faxjobidstatusget) | **GET** /fax/{job_id}/status | 
-[**FaxPost**](FaxApi.md#faxpost) | **POST** /fax | 
+[**IncomingFaxesGet**](FaxApi.md#incomingfaxesget) | **GET** /incoming-faxes | 
+[**IncomingFaxesNumberGet**](FaxApi.md#incomingfaxesnumberget) | **GET** /incoming-faxes/{number} | 
+[**ProvisionNumbersGet**](FaxApi.md#provisionnumbersget) | **GET** /provision-numbers | 
 
 
 <a name="faxdocumentidcostsget"></a>
@@ -73,9 +75,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="faxhistoryget"></a>
-# **FaxHistoryGet**
-> void FaxHistoryGet (string apiKey, string limit = null, string page = null)
+<a name="faxget"></a>
+# **FaxGet**
+> void FaxGet (string apiKey, string limit = null, string page = null)
 
 
 
@@ -91,7 +93,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class FaxHistoryGetExample
+    public class FaxGetExample
     {
         public void main()
         {
@@ -102,11 +104,11 @@ namespace Example
 
             try
             {
-                apiInstance.FaxHistoryGet(apiKey, limit, page);
+                apiInstance.FaxGet(apiKey, limit, page);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaxApi.FaxHistoryGet: " + e.Message );
+                Debug.Print("Exception when calling FaxApi.FaxGet: " + e.Message );
             }
         }
     }
@@ -197,13 +199,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="faxpost"></a>
-# **FaxPost**
-> void FaxPost (string apiKey, string faxNumber, int? documentId = null, string tsiNumber = null, System.IO.Stream file = null, int? deleteFile = null)
+<a name="incomingfaxesget"></a>
+# **IncomingFaxesGet**
+> void IncomingFaxesGet (string apiKey)
 
 
 
-This API send the fax. When we send fax using API, Fax.to send a POST to the Callback URL you specified in https://fax.to/member/api/live. Fax.to send POST data with the following information fax_job_id, status and message. 
+This API get faxes . 
 
 ### Example
 ```csharp
@@ -215,25 +217,20 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class FaxPostExample
+    public class IncomingFaxesGetExample
     {
         public void main()
         {
             var apiInstance = new FaxApi();
             var apiKey = apiKey_example;  // string | API Key
-            var faxNumber = faxNumber_example;  // string | Fax Number
-            var documentId = 56;  // int? | Document id. If you want to use existing document you need to specify the document_id (optional) 
-            var tsiNumber = tsiNumber_example;  // string | If we want to to change the text or number that appear on 'from' or 'sender' of the fax (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | PDF file to upload (optional) 
-            var deleteFile = 56;  // int? | Whether to delete file after fax transaction. (put 1 to delete) (optional) 
 
             try
             {
-                apiInstance.FaxPost(apiKey, faxNumber, documentId, tsiNumber, file, deleteFile);
+                apiInstance.IncomingFaxesGet(apiKey);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaxApi.FaxPost: " + e.Message );
+                Debug.Print("Exception when calling FaxApi.IncomingFaxesGet: " + e.Message );
             }
         }
     }
@@ -245,11 +242,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **apiKey** | **string**| API Key | 
- **faxNumber** | **string**| Fax Number | 
- **documentId** | **int?**| Document id. If you want to use existing document you need to specify the document_id | [optional] 
- **tsiNumber** | **string**| If we want to to change the text or number that appear on &#39;from&#39; or &#39;sender&#39; of the fax | [optional] 
- **file** | **System.IO.Stream**| PDF file to upload | [optional] 
- **deleteFile** | **int?**| Whether to delete file after fax transaction. (put 1 to delete) | [optional] 
 
 ### Return type
 
@@ -261,7 +253,129 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="incomingfaxesnumberget"></a>
+# **IncomingFaxesNumberGet**
+> void IncomingFaxesNumberGet (string apiKey, string number)
+
+
+
+This API get faxes  by number. 
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class IncomingFaxesNumberGetExample
+    {
+        public void main()
+        {
+            var apiInstance = new FaxApi();
+            var apiKey = apiKey_example;  // string | API Key
+            var number = number_example;  // string | Number in the fax
+
+            try
+            {
+                apiInstance.IncomingFaxesNumberGet(apiKey, number);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.IncomingFaxesNumberGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiKey** | **string**| API Key | 
+ **number** | **string**| Number in the fax | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="provisionnumbersget"></a>
+# **ProvisionNumbersGet**
+> void ProvisionNumbersGet (string apiKey, string limit = null)
+
+
+
+This API get Provision numbers. 
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ProvisionNumbersGetExample
+    {
+        public void main()
+        {
+            var apiInstance = new FaxApi();
+            var apiKey = apiKey_example;  // string | API Key
+            var limit = limit_example;  // string | Limit to display (optional) 
+
+            try
+            {
+                apiInstance.ProvisionNumbersGet(apiKey, limit);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.ProvisionNumbersGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiKey** | **string**| API Key | 
+ **limit** | **string**| Limit to display | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
